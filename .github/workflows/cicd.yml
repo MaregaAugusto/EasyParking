@@ -21,14 +21,17 @@ jobs:
         version-name: ${{ secrets.APP_VERSION }}
         version-code: ${{ github.run_number }}
         print-file: true
+    
+    - name: Restore 1
+      run: ls -la
       
-    - name: Restore NuGet packages
+    - name: Restore NuGet packages 1
       run: ./EasyParking-api/nuget restore
     
     - name: Build API
       run: MSBuild /p:Configuration=Release ./EasyParking-api/EasyParkingAPI/EasyParkingAPI.csproj
     
-    - name: Restore NuGet packages
+    - name: Restore NuGet packages 2
       run: ./EasyParking-app/nuget restore
 
     - name: Build Android
