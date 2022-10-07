@@ -23,7 +23,7 @@ jobs:
         print-file: true
     
     - name: Restore 1
-      run: ls -la, cd EasyParking-app, ls -la
+      run: ls -la || cd ./EasyParking-app || ls -la
       
     - name: Restore NuGet packages 1
       run: nuget restore
