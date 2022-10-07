@@ -26,13 +26,13 @@ jobs:
       run: ls -la
       
     - name: Restore NuGet packages 1
-      run: ./EasyParking-api/nuget restore
+      run: EasyParking-api/nuget restore
     
     - name: Build API
       run: MSBuild /p:Configuration=Release ./EasyParking-api/EasyParkingAPI/EasyParkingAPI.csproj
     
     - name: Restore NuGet packages 2
-      run: ./EasyParking-app/nuget restore
+      run: EasyParking-app/nuget restore
 
     - name: Build Android
       run: MSBuild /t:SignAndroidPackage /p:Configuration=Release /p:AndroidPackageFormat=apk /p:AndroidKeyStore=true /p:AndroidSigningKeyAlias=TestCICD /p:AndroidSigningKeyPass=${{ secrets.KEYSTORE_PASSWORD }} /p:AndroidSigningKeyStore=testcicd.keystore /p:AndroidSigningStorePass=${{ secrets.KEYSTORE_PASSWORD }} ./EasyParking-app/EasyParking/EasyParking.Android/EasyParking.Android.csproj
