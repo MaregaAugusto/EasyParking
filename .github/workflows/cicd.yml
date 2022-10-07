@@ -26,7 +26,7 @@ jobs:
       run: ls -la
       
     - name: Restore NuGet packages 1
-      run: EasyParking-api/nuget restore
+      run: EasyParking-app/nuget restore
     
     - name: Build API
       run: MSBuild /p:Configuration=Release ./EasyParking-api/EasyParkingAPI/EasyParkingAPI.csproj
