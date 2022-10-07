@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:custom="clr-namespace:EasyParking.Custom" xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                 x:Class="EasyParking.Views.Reservas.Reserva.PopupReserva">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400"
+                                   DurationOut="200"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinOut"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.6"/>
+    </pages:PopupPage.Animation>
+
+
+    <Frame  CornerRadius="3" Padding="10" Margin="20" HasShadow="True"  BackgroundColor="White" VerticalOptions="Center">
+
+        <StackLayout>
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand">
+                <custom:CustomLabel AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"  Text="Reservar" HorizontalOptions="Center"  Margin="0,0,0,0" VerticalOptions="Center" FontSize="20"/>
+
+                <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" Spacing="2"  VerticalOptions="Center">
+                    
+                    <Image Source="estrella.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"/>
+                    <custom:CustomLabel  Text="3.3" FontSize="15" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+            </AbsoluteLayout>
+
+
+            <Frame  CornerRadius="3" Padding="10" HasShadow="True"  BackgroundColor="White">
+                <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand"  BackgroundColor="Transparent">
+
+                    <custom:CustomLabel Text="Estacionamiento Ibañes" FontSize="16" Margin="0"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="ubicacion.png" HeightRequest="15" WidthRequest="15"/>
+                        <custom:CustomLabel Text="Av 9 de Julio al 987" FontSize="14" VerticalOptions="Center" TextColor="Gray" />
+                    </StackLayout>
+                    <custom:CustomLabel Text="Terreno parcialmente cubierto" Margin="0"  TextColor="Gray"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+
+
+                </StackLayout>
+            </Frame>
+
+            <Frame  CornerRadius="3" Padding="10" HasShadow="True"  BackgroundColor="White">
+                <StackLayout Orientation="Horizontal">
+                    <custom:CustomLabel Text="Total de la reserva:" FontSize="18" VerticalOptions="Center" TextColor="Gray" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="0">
+                        <Image Source="peso.png" HeightRequest="20" WidthRequest="20"/>
+                        <custom:CustomLabel Text="120" FontSize="18" VerticalOptions="Center" TextColor="Gray" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame  CornerRadius="3" Padding="10" HasShadow="True"  BackgroundColor="White">
+                <StackLayout>
+                    <custom:CustomLabel Text="Indique su vehículo: " FontSize="18" MaxLines="4" VerticalOptions="Center" TextColor="Gray" />
+                    <custom:CustomButton x:Name="btnMisVehiculos" Clicked="btnMisVehiculos_Clicked" Text="Seleccionar de mis vehículos" BackgroundColor="{StaticResource Color7}" TextColor="White" CornerRadius="3" HeightRequest="40"/>
+                    <custom:CustomButton x:Name="btnNuevoVehiculo" Clicked="btnNuevoVehiculo_Clicked" Text="Ingresar un nuevo vehículo" BackgroundColor="{StaticResource Color7}" TextColor="White" CornerRadius="3" HeightRequest="40"/>
+
+                    <Frame  CornerRadius="3" Padding="0" HasShadow="True" Margin="5,10,5,10"  BackgroundColor="White">
+                        <StackLayout Spacing="0">
+                            <border:SfBorder BorderColor = "Gainsboro" BackgroundColor="Gainsboro"  BorderWidth="4" Margin="0,0,0,0">
+                                <!--<custom:CustomLabel Grid.Column="0" Grid.Row="0" Text="Moto" FontSize="16" Margin="0" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>-->
+                            </border:SfBorder>
+
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <custom:CustomLabel Grid.Column="0" Grid.Row="0" Text="Tipo:" FontSize="16" Margin="0" HorizontalOptions="Center" FontAttributes="Bold"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+                                <custom:CustomLabel Grid.Column="0" Grid.Row="1" Text="Moto" FontSize="16" Margin="0" HorizontalOptions="Center"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+                                <custom:CustomLabel Grid.Column="1" Grid.Row="0" Text="Patente:" FontSize="16" Margin="0"  HorizontalOptions="Center" FontAttributes="Bold"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+                                <custom:CustomLabel Grid.Column="1" Grid.Row="1" Text="AS568" FontSize="16" Margin="0"  HorizontalOptions="Center"  TextColor="Black"  MaxLines="4"  LineBreakMode="TailTruncation"/>
+
+                            </Grid>
+
+                        </StackLayout>
+                    </Frame>
+                    
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Margin="0,10,0,0" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" Spacing="2"  VerticalOptions="Center">
+
+                <Image Source="warning.png" HeightRequest="16" WidthRequest="16" VerticalOptions="Center"/>
+                <custom:CustomLabel  Text="Duración de la reserva antes de su vencimiento: 1 hs" MaxLines="10" FontSize="12" VerticalOptions="Center" TextColor="Black" />
+            </StackLayout>
+            <custom:CustomLabel  Text="Pasado este lapso de tiempo luego de realizado el pago y obtenida la confirmacion efectiva de la reserva, no podrá reclamarse por el mismo sí no se cumplió con el arribo al lugar en ese lapso de tiempo fijado." MaxLines="10" FontSize="12" VerticalOptions="Center" TextColor="Black" />
+
+
+
+
+            <Grid HorizontalOptions="End" Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <syncfusion:SfButton Grid.Column="0" Grid.Row="0" x:Name="btnCancelar" Clicked="btnCancelar_Clicked"   Text="Cancelar" FontSize="16" HeightRequest="40"   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="{StaticResource Color7}" Padding="0"  CornerRadius="3"
+                                                              BorderColor="{StaticResource Color7}" BorderWidth="2"  BackgroundColor="Transparent"  Margin="0,10,0,10" FontAttributes="Bold"  VerticalOptions="EndAndExpand" />
+
+
+                <syncfusion:SfButton Grid.Column="1" Grid.Row="0" x:Name="btnConfirmarReserva"  Text="Pagar" FontSize="16" HeightRequest="40"   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="White" Padding="0"  CornerRadius="3"
+                                                              BackgroundColor="{StaticResource Color7}"   Margin="0,10,0,10" FontAttributes="Bold"  VerticalOptions="EndAndExpand" />
+
+
+
+            </Grid>
+
+
+
+
+
+        </StackLayout>
+
+
+    </Frame>
+</pages:PopupPage>

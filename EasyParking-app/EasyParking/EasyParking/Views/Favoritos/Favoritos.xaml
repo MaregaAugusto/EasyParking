@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:EasyParking.Components"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:custom="clr-namespace:EasyParking.Custom" xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="EasyParking.Views.Favoritos.Favoritos" NavigationPage.IconColor="Black">
+
+
+
+    <NavigationPage.TitleView>
+        <views:NavBar x:Name="navBar"    Title="Favoritos" IsVisibleFavoritos="False" IsVisibleBoxSearch="False"  />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <syncfusion:SfListView  x:Name="lwlisado"   AutoFitMode="DynamicHeight"
+                                VerticalOptions="Center" SelectionBackgroundColor="Transparent"
+                                                    HorizontalOptions="EndAndExpand" >
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <views:Card_Parking x:Name="Card_Parking"   Margin="10,10,10,0"/>
+                    </ViewCell>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </ContentPage.Content>
+</ContentPage>

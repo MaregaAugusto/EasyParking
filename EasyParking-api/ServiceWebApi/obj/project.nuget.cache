@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eeBkJhrEtULlzVPIbWzzi7URDrDdMAi8mzICa0Q7+QyJyi2gBKipqPZXyJLHarY8PBN5htH4Iy59H1EgwZQTXQ==",
+  "success": true,
+  "projectFilePath": "D:\\EasyParking\\EasyParking-api\\ServiceWebApi\\ServiceWebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\augus\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
