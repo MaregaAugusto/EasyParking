@@ -23,10 +23,10 @@ jobs:
         print-file: true
     
     - name: Restore 1
-      run: ls -la
+      run: ls -la, cd EasyParking-app, ls -la
       
     - name: Restore NuGet packages 1
-      run: EasyParking-app/nuget restore
+      run: nuget restore
     
     - name: Build API
       run: MSBuild /p:Configuration=Release ./EasyParking-api/EasyParkingAPI/EasyParkingAPI.csproj
